@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Description.cpp" />
+    <ClCompile Include="LoadEfemForm.cpp" />
+    <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="PzForm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Description.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="LoadEfemForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PzForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultValuesEdited.resx">
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ManchesterManager.DefaultValuesEdited.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ManchesterManager.DefaultValuesEdited.resources</LogicalName>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent>true</DeploymentContent>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultValuesNotEdited.resx">
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ManchesterManager.DefaultValuesNotEdited.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ManchesterManager.DefaultValuesNotEdited.resources</LogicalName>
+      <DeploymentContent>true</DeploymentContent>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Description.resx">
+      <DependentUpon>Description.h</DependentUpon>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ManchesterManager.Description.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ManchesterManager.Description.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadEfemForm.resx">
+      <DependentUpon>LoadEfemForm.h</DependentUpon>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ManchesterManager.LoadEfemForm.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ManchesterManager.LoadEfemForm.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.h</DependentUpon>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ManchesterManager.MainForm.resources</LogicalName>
+      <SubType>Designer</SubType>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ManchesterManager.MainForm.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PzForm.resx">
+      <DependentUpon>PzForm.h</DependentUpon>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ManchesterManager.PzForm.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ManchesterManager.PzForm.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ManchesterManager.Resource.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ManchesterManager.Resource.resources</LogicalName>
+      <DeploymentContent>true</DeploymentContent>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Manchester.DataLoader\Manchester.DataLoader.vcxproj">
+      <Project>{2c7c05a2-6f63-42f0-b858-9bae4511e759}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Manchester.Efems\Manchester.Efems.vcxproj">
+      <Project>{8d9919cb-7bd6-4287-8058-c6e5a50bdba3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Manchester.EnumerableMethods\Manchester.EnumerableMethods.vcxproj">
+      <Project>{86b38f94-61da-4287-a0dd-9a64d339c385}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Manchester.FSM\Manchester.FSM.vcxproj">
+      <Project>{2dd1afad-ed91-40fc-9d65-0e01c09aa513}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Manchester.Logging\Manchester.Logging.vcxproj">
+      <Project>{c129ce35-3269-4cea-a1d2-ab6d5001e4f8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Manchester.Taks\Manchester.Taks.vcxproj">
+      <Project>{d6a02ba5-5a4e-4c04-ae7d-d3be10751593}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{10866DEC-FB6E-427B-9FFB-CA80EF9063FE}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>ManchesterMain</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+      <EmbedManagedResourceFile>
+      </EmbedManagedResourceFile>
+    </Link>
+    <EmbeddedResource>
+      <LogicalName>
+      </LogicalName>
+    </EmbeddedResource>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
